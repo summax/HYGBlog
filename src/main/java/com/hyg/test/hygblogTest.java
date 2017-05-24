@@ -15,7 +15,7 @@ public class hygblogTest {
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     public String SayHi(ModelMap modelMap) {
         modelMap.addAttribute("welcome", "HYGBlog Test");
-
+        System.out.printf("test");
         return "test";
     }
 }

@@ -8,6 +8,7 @@
     <context:component-scan base-package="com.hyg"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前面有个/ 已经表示为当前路径(webapp)下了-->
         <property name="prefix" value="/webpage/"/>
         <property name="suffix" value=".jsp"/>
     </bean>

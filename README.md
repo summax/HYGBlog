@@ -1,2 +1,2 @@
 # HYGBlog
-HYGBlog
+- 认真工作，好好学习，天天向上
