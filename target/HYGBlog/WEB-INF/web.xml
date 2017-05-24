@@ -3,7 +3,12 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+    <!-- 应用名称 -->
     <display-name>HYGBlog</display-name>
+    <context-param>
+        <param-name/>
+        <param-value/>
+    </context-param>
 
     <!--Spring前端控制器-->
     <servlet>
@@ -14,7 +19,7 @@
         <init-param>
             <!--使用resources路径下的spring配置文件-->
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath*:spring-mvc/spring-mvc.xml</param-value>
+            <param-value>classpath*:xml/spring-mvc.xml</param-value>
             <description>spring mvc 配置文件</description>
         </init-param>
         <!--表示启动容器时初始化该Servlet-->
