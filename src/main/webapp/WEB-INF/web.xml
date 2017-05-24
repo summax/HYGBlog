@@ -14,7 +14,7 @@
         <init-param>
             <!--使用resources路径下的spring配置文件-->
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath*:spring-mvc.xml</param-value>
+            <param-value>classpath*:spring-mvc/spring-mvc.xml</param-value>
             <description>spring mvc 配置文件</description>
         </init-param>
         <!--表示启动容器时初始化该Servlet-->
@@ -24,7 +24,18 @@
         <!--与servlet名称相同-->
         <servlet-name>SpringMvc</servlet-name>
         <!--表示哪些请求交给Spring Web MVC处理-->
-        <url-pattern>/</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+    <!--与welcome-file-list相对应
+    welcome定义的welcome会被此处拦截到然后转入相应的controller(/welcome)处理-->
+    <servlet-mapping>
+        <servlet-name>SpringMvc</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+
+    <!--定制访问起始页-->
+    <welcome-file-list>
+        <welcome-file>welcome</welcome-file>
+    </welcome-file-list>
 
 </web-app>
